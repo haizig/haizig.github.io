@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		
-		<title></title>
-	</head>
-	<body>
-		<p id="wenzi"><!--每一年<br />都有大面积的森林被毁灭--></p>
-		<p id="jiaz"></p>
-	</body>
-	<script type="text/javascript">
-									z()
-//			第二页的文字
-			weizi=document.getElementById("wenzi");
-			var w=0;
-			aa="每一年<br />都有大面积的森林被毁灭"
-			function z () {
-				setInterval(function  d() {
-				if(w<=aa.length){weizi.innerHTML=aa.substring(0,w++);}
-			},1000);
-			}
-				zi()
-			jiaz=document.getElementById("jiaz");
-			var i=0;
-			js1='我是南方思路死啊阿里覅看啊产能释放钉钉打卡'
-			function zi () {
-				setInterval(function c () {
-					if(i<js1.length){jiaz.innerHTML=js1.substring(0,i++)}
-				},10)
-			}
-	</script>
+<head>
+<meta charset="utf-8">
+<title>你好——2021年 - 阿灿-acabk.com</title>
+<meta name="chenc" content="Runoob">
+<meta name="description" content="时钟 时间 & 钟表 日历">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/font_1191451_h720mljzrsc.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jweixin-1.4.0.js"></script> 
+<script src="js/app.js"></script>
+
+</head>
+<body>
+    <div class="key">
+        <div class="iocnBox"><i class="iconfont icon-delete"></i></div>
+        <div class="empty">清空</div>
+        <textarea placeholder="在此述说新年寄语..." rows="1" class="van-field__control"></textarea>
+        <div class="buts">发送</div>
+    </div>
+    <div class="today">
+        <div class="clock">
+            <div class="pos SS"></div>
+            <div class="pos MM"></div>
+            <div class="pos HH"></div>
+            <div class="spot"></div>
+        </div>
+        <!-- <p>北京时间</p> -->
+        <!-- <div class="day"></div>         -->
+        <div class="time"></div>
+        <div class="sydate"></div>
+    </div>
+    <div class="Barrage"></div>
+    <div class="message">发送弹幕</div>
+
+<script src="js/snowy.js"></script>
+<style type="text/css">
+.snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;}</style>
+<div class="snow-container"></div>
+
+</body>
 </html>
