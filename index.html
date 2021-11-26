@@ -55,9 +55,6 @@
 							from{-webkit-transform: rotateY(0deg);}
 							to{-webkit-transform: rotateY(360deg);}
 						}
-						section:hover{
-							-webkit-animation-play-state: paused;
-						}
 						section div {
 							position: absolute;
 							top: 0;
@@ -240,7 +237,21 @@
 					}
 					icons[n].style.background="yellow"
 				}
-				
+					main.onmouseover=function  () {
+					clearInterval(timer);
+				}
+				main.onmouseout=function  () {
+					timer=setInterval(run,1000);
+				}
+				for(var i=0;i<icons.length;i++){
+					(function(i){
+						icons[i].onmouseover=function  () {
+						imgrun(i);
+						lirun(i);
+						m=i+1;
+					}
+					})(i)
+				}
 				var box3nav=document.getElementsByClassName('box3-nav');
 				var dian1=document.getElementById("dian1");
 				var dian2=document.getElementById("dian2");
