@@ -3,12 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>海哥特效店</title>
 		<style type="text/css">
 			*{
 				margin: 0;
 				padding: 0;
 				list-style: none;
+				text-decoration: none;
+				color: black;
 			}
 			
 			#header{
@@ -64,7 +66,7 @@
 							height: 100%;
 						}
 						section div img{
-							width: 40px;height: 40px;
+							width: 96px;height: 96px;
 						}
 						section div:nth-child(1) {
 							-webkit-transform: translateZ(100px);
@@ -86,7 +88,60 @@
 						}
 						#box3{
 							width: 100vw;
-							height: 30vh;
+							height: 20vh;
+						}
+						#box3-box{
+							width: 100vw;
+							height: 10vh;
+							display: flex;
+							justify-content: space-around;
+						}
+						.box3-nav{
+							width: 40px;
+							height: 40px;
+							background: red;
+							text-align: center;
+							line-height: 40px;
+						}
+						#dian2,#dian3{
+							display: none;
+						}
+						#dian2,#dian3 p{
+							color: goldenrod;
+							font-size: 20px;
+						}
+						#box4{
+							width: 100vw;
+							height: 20vh;
+						}
+						#box4-box{
+							width: 40px;
+							height: 40px;
+							background: yellowgreen;
+							animation: 4s yd linear infinite;
+						}
+						@keyframes yd{
+							0%{margin-left: 0;}
+							50%{margin-left: 200px;}
+						}
+						#box5{
+							width: 100vw;
+							height: 6vh;
+							background: gray;
+							position: absolute;
+							bottom: 0;
+							
+						}
+						#box5-bottom{
+							width: 100vw;
+							height: 6vh;
+						}
+						#box5-bottom ul{
+							width: 100vw;
+							height: 6vh;
+							display: flex;
+							justify-content: space-around;
+							align-items: center;
 						}
 		</style>
 	</head>
@@ -124,8 +179,39 @@
 			</section>
 		</div>
 		<div id="box3">
-			<a href="index1.html"><button type="button">除夕倒计时</button></a>
-			<a href="index2.html"><button type="button">看烟花</button></a>
+			<div id="box3-box">
+				<div class="box3-nav">1</div>
+				<div class="box3-nav">2</div>
+				<div class="box3-nav">3</div>
+			</div>
+			<div id="dian1">
+				<a href="index1.html"><button type="button">除夕倒计时</button></a>
+				<a href="index2.html"><button type="button">看烟花</button></a>
+			</div>
+			<div id="dian2">
+				<p>等待开发</p>
+			</div>
+			<div id="dian3">
+				<p>等待开发</p>
+			</div>
+		</div>
+		<div id="box4">
+			<div id="box4-box">
+				
+			</div>
+		</div>
+		<div id="box5">
+			<div id="box5-bottom">
+				<ul>
+					<a href=""><li>首页</li></a>
+					<a href=""><li>充值</li></a>
+					<a href=""><li>活动</li></a>
+					<a href=""><li>我的</li></a>
+					
+					
+					
+				</ul>
+			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
@@ -169,5 +255,29 @@
 					}
 					})(i)
 				}
+				var box3nav=document.getElementsByClassName('box3-nav');
+				var dian1=document.getElementById("dian1");
+				var dian2=document.getElementById("dian2");
+				var dian3=document.getElementById("dian3");
+				box3nav[0].addEventListener('click',dian1a);
+				box3nav[1].addEventListener('click',dian2a);
+				box3nav[2].addEventListener('click',dian3a);
+				function dian1a(){
+					dian1.style.display='block'
+					dian2.style.display='none'
+					dian3.style.display='none'
+				}
+				function dian2a(){
+					dian1.style.display='none'
+					dian2.style.display='block'
+					dian3.style.display='none'
+				}
+				function dian3a(){
+					dian1.style.display='none'
+					dian2.style.display='none'
+					dian3.style.display='block'
+				}
+				
+				
 	</script>
 </html>
