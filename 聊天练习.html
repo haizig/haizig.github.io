@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: skyblue;
+			}
+			#phone{
+				width: 312px;
+				height: 623px;
+				background: url(phone1.png);
+				margin: 0 auto;
+				position: relative;
+			}
+			#top{
+				width: 282px;
+				height: 450px;
+				background: url(风景.webp);
+				background-size: cover;
+				margin: 0 auto;
+				position: absolute;
+				/* margin-top: 75px;
+				margin-left: 24px; */
+				overflow: hidden;
+				overflow: scroll;
+			}
+			#yctop{
+				width: 264px;
+				height: 430px;
+				margin: 0 auto;
+				position: absolute;
+				margin-top: 75px;
+				margin-left: 24px;
+				overflow: hidden;
+			}
+			#bottom{
+				width: 264px;
+				height: 40px;
+				background: wheat;
+				margin: 0 auto;
+				position: absolute;
+				margin-top: 505px;
+				margin-left: 24px;
+			}
+			#touxiang{
+				width: 30px;
+				height: 30px;
+				margin-top: 5px;
+				margin-left: 5px;
+				float: left;
+			}
+			#input{
+				width: 150px;
+				height: 20px;
+				line-height: 20px;
+				float: left;
+				margin-top: 10px;
+				margin-left: 5px;
+			}
+			#button{
+				width: 40px;
+				height: 30px;
+				margin-top: 5px;
+				margin-left: 12px;
+				float: left;
+			}
+			.right{
+				width: 260px;
+				float: right;
+				margin-bottom: 5px;
+			}
+			.right img{
+				width: 40px;
+				height: 40px;
+				float: right;
+				margin-right: 5px;
+				border-radius: 5px;
+			}
+			.right p{
+				height: 30px;
+				background: white;
+				border-radius: 4px;
+				float: right;
+				margin-right: 5px;
+				margin-top: 5px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.left{
+				width: 260px;
+				float: left;
+				margin-bottom: 5px;
+			}
+			.left img{
+				width: 40px;
+				height: 40px;
+				float: left;
+				margin-right: 5px;
+				border-radius: 5px;
+			}
+			.left p{
+				height: 30px;
+				background: greenyellow;
+				border-radius: 4px;
+				float: left;
+				margin-right: 5px;
+				margin-top: 5px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.right img:active{
+				animation: .3s dright linear;
+			}
+			@keyframes dright{
+				0%{transform: rotate(0deg);}
+				25%{transform: rotate(6deg);}
+				50%{transform: rotate(0deg);}
+				75%{transform: rotate(6deg);}
+				100%{transform: rotate(0deg);}
+			}
+			.left img:active{
+				animation: .3s dleft linear;
+			}
+			@keyframes dleft{
+				0%{transform: rotate(0deg);}
+				25%{transform: rotate(6deg);}
+				50%{transform: rotate(0deg);}
+				75%{transform: rotate(6deg);}
+				100%{transform: rotate(0deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="phone">
+			<div id="yctop">
+				
+			
+			<div id="top">
+				<!-- <div class="right">
+					<img src="img/乒乓球.png" >
+					<p>12345</p>
+				</div>
+				<div class="left">
+					<img src="img/举重.png" >
+					<p>54321</p>
+				</div> -->
+			</div>
+			</div>
+			<div id="bottom">
+				<img src="1.jpg" id="touxiang">
+				<input type="text" name="" id="input" value="" placeholder="请输入消息"/>
+				<button type="button" id="button">发送</button>
+			</div>
+		</div>
+	</body>
+	<script>
+		var touxiang=document.getElementById("touxiang");
+		var i=1;
+		touxiang.onclick=function()
+		{
+			if(i%2==1){
+			touxiang.style.backgroundImage="url(2.jpg)";
+			}
+		else{
+			touxiang.style.backgroundImage="url(1.jpg)";
+			}
+			i++;
+		}
+		var ts=document.getElementById("top");
+		var input=document.getElementById("input");
+		var button=document.getElementById("button");
+		var touxiang=document.getElementById("touxiang");
+		button.onclick=function  () {
+			if(i%2==0){
+				var objie=document.createElement("div");
+				objie.className='right';
+				objie.innerHTML=`
+				<img src="1.jpg" >
+				<p>${input.value}</p>
+				`;
+				if(input.value==0){
+					
+				}
+				else{
+					ts.appendChild(objie);
+				}
+			}
+			else{
+				var objie=document.createElement("div");
+				objie.className='left';
+				objie.innerHTML=`
+				<img src="2.jpg" >
+				<p>${input.value}</p>
+				`;
+				if(input.value==0){
+					
+				}
+				else{
+					ts.appendChild(objie);
+				}
+			}
+				input.value='';
+		}
+		var i=0;
+		touxiang.onclick=function  () {
+			if(i%2==0){
+				this.src='2.jpg';
+			}
+			else{
+				this.src='1.jpg';
+			}
+			i++;
+		}
+	</script>
+</html>
