@@ -26,17 +26,8 @@
 			#box1{
 				width: 100vw;
 				height: 19vh;
-				
 			}
-			#imglist img{width: 100vw;height: 19vh;}
-			#main{width: 100vw;height: 19vh;position: relative;overflow: hidden;}
-			#lilist{position: absolute;right: 0;bottom: 0;}
-			#lilist li{float: left;background: #999999;width: 20px;height: 20px;
-			border-radius: 50%;text-align: center;margin-left: 3px;cursor: pointer;
-			}
-			#lilist li:nth-child(1){
-				background: yellow;
-			}
+			
 			#box2{
 				width: 100vw;
 				height: 20vh;
@@ -139,6 +130,13 @@
 							justify-content: space-around;
 							align-items: center;
 						}
+						
+						.zhushi{
+							font-size: 10px;
+							bottom: 10%;
+							right: 0;
+							position: absolute;
+						}
 		</style>
 	</head>
 	<body>
@@ -147,22 +145,7 @@
 			<p>"给自己一个机会"</p>
 		</div>
 		<div id="box1">
-			<div id="main">
-				<ul id="imglist">
-					<li><img src="zp1.jpg" ></li>
-					<li><img src="zp2.jpg" ></li>
-					<li><img src="zp3.jpg" ></li>
-					<li><img src="zp4.png" ></li>
-					<li><img src="zp5.png" ></li>
-				</ul>
-				<ul id="lilist">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-				</ul>
-			</div>
+			
 		</div>
 		<div id="box2">
 			<section>
@@ -181,8 +164,8 @@
 				<div class="box3-nav">3</div>
 			</div>
 			<div id="dian1">
-				<a href="index1.html"><button type="button">除夕倒计时</button></a>
-				<a href="index2.html"><button type="button">看烟花</button></a>
+				<a href="海子时钟.html"><button type="button">除夕倒计时</button></a>
+				<a href="烟花.html"><button type="button">看烟花</button></a>
 				<a href="聊天练习.html"><button type="button">聊天系统</button></a>
 			</div>
 			<div id="dian2">
@@ -201,58 +184,16 @@
 			<div id="box5-bottom">
 				<ul>
 					<a href=""><li>首页</li></a>
-					<a href=""><li>充值</li></a>
+					<a href="充值.html"><li>充值</li></a>
 					<a href=""><li>活动</li></a>
 					<a href=""><li>我的</li></a>
-					
-					
-					
 				</ul>
 			</div>
 		</div>
+		<p class="zhushi">本网站不支持pc端——因为作者太菜了</br>会慢慢更新，有想法就写</p>
 	</body>
 	<script type="text/javascript">
-	window.onload=function  () {
-		var main=document.getElementById("main");
-				var imglsls=document.getElementById("imglist").getElementsByTagName('li');
-				var icons=document.getElementById("lilist").getElementsByTagName('li');
-				var m=0;
-				var timer=setInterval(run,2000);
-				function run () {
-					if(m>=5){
-						m=0;
-					}
-					imgrun(m);
-					lirun(m);
-					m++;
-				}
-				function imgrun (n) {
-					for(var i=0;i<imglsls.length;i++){
-						imglsls[i].style.display='none'
-					}
-					imglsls[n].style.display='block'
-				}
-				function lirun (n) {
-					for(var i=0;i<icons.length;i++){
-						icons[i].style.background="#999999"
-					}
-					icons[n].style.background="yellow"
-				}
-				main.onmouseover=function  () {
-					clearInterval(timer);
-				}
-				main.onmouseout=function  () {
-					timer=setInterval(run,1000);
-				}
-				for(var i=0;i<icons.length;i++){
-					(function(i){
-						icons[i].onmouseover=function  () {
-						imgrun(i);
-						lirun(i);
-						m=i+1;
-					}
-					})(i)
-				}
+		
 				var box3nav=document.getElementsByClassName('box3-nav');
 				var dian1=document.getElementById("dian1");
 				var dian2=document.getElementById("dian2");
@@ -275,8 +216,6 @@
 					dian2.style.display='none'
 					dian3.style.display='block'
 				}
-	}
-		
 				
 				
 	</script>
