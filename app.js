@@ -18,7 +18,7 @@ $(document).ready(function(){
     $(".date").before(times);
 
     //春节倒计时
-    var starttime = new Date("2022/1/31");
+    var starttime = new Date("2023/1/31");
     setInterval(function () {
         var nowtime = new Date();
         var time = starttime - nowtime;
@@ -125,7 +125,7 @@ $(document).ready(function(){
     });
 
 
-    var mess = "<span>没想到新年马上就要到了</span><span class='B-span2'>祝你我新年快乐！</span><span>你好2022新的一年。</span>";
+    var mess = "<span>没想到新年马上就要到了</span><span class='B-span2'>祝你我新年快乐！</span><span>你好2023新的一年。</span><span>希望你喜欢的人也能一样喜欢你</span><span>海哥永远在这。</span>";
     $(".Barrage").append(mess);
 
     $(".buts").click(function(){
